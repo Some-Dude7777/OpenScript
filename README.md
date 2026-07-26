@@ -55,7 +55,7 @@ mouse.OnClicked(MouseClicked())
 
 # Anonymous Functions
 
-An anonymous function is a function that gets called instantly upon definition.
+An anonymous function is a function that gets called instantly upon definition. Defined with the ```lambda``` keyword.
 
 ```
 from input use mouse
@@ -156,3 +156,15 @@ end
 
 # If / Elif / Else
 
+Just an if statement, executes only if the condition is true.
+
+```
+from std use print()
+from system use os
+
+if os.name == "Win32":
+  print("Hello from windows")
+elif os.name == "Linux":
+  print("Hello from linux")
+end
+```
