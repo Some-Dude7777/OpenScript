@@ -8,6 +8,10 @@ Youtube tutorial and syntax highlighting will be created once the language is fi
 - Structs, enums, classes, etc.
 - Closures
 
+# Installation
+
+
+
 # Hello, world!
 
 Here's how to print "Hello World!" in this language:
