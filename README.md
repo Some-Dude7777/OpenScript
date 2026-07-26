@@ -6,7 +6,7 @@ Youtube tutorial and syntax highlighting will be created once the language is fi
 
 - Support for both static and dynamic typing.
 - Structs, enums, classes, etc.
-- Pointers, closures
+- Closures
 
 # Hello, world!
 
@@ -51,6 +51,21 @@ func MouseClicked():
 end
 
 mouse.OnClicked(MouseClicked())
+```
+
+# Anonymous Functions
+
+An anonymous function is a function that gets called instantly upon definition.
+
+```
+from input use mouse
+from std use print()
+
+mouse.OnClicked(
+  lambda():
+    print("Mouse Clicked!")
+  end
+)
 ```
 
 # Modules
