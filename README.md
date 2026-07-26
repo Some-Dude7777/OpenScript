@@ -1,6 +1,12 @@
 # OpenScript
-A fast, dynamically typed interpreted language written in C++. Syntax similar to Python, Lua, Ruby and some other languages.
+A fast, dynamically AND statically typed, OOP-based interpreted language written in C++. It's meant to be a Python successor. Syntax similar to Python, Lua, Ruby and some other languages.
 Youtube tutorial and syntax highlighting will be created once the language is finished.
+
+# Features
+
+- Support for both static and dynamic typing.
+- Structs, enums, classes, etc.
+- Pointers, closures
 
 # Hello, world!
 
@@ -67,3 +73,48 @@ And you use ```as``` when you want to use a library or a function, class, variab
 ```
 from std use print() as cout() // the interpreter now doesn't understand print() and only understands cout(), althought they have the exact same functionality
 ```
+
+# Loops
+
+There are 3 types of loops (its a coincidence that every feature has 3 types): for loop, repeat loop and repeat while loop
+
+```
+from std use print()
+from syestem use sleep()
+
+for i = 0, 10, 1:
+  print("This has been printed " .. i .. " times")
+end
+
+repeat 5:
+  print("This will be printed 5 times")
+end
+
+repeat while true:
+  print("this will print every second")
+  sleep(1)
+end
+```
+
+# Classes & Structs
+
+Classes are defined like this:
+
+```
+from std use print
+
+class Ship(type, name):
+  field type = type // note: there is an automatic constructor, so you don't need a __init__ method unlike Python.
+  field name = name
+
+
+  func Go_Sailing(self):
+    print("Ship with the name " .. self.name .. " and type " .. self.type " has went sailing."
+  end
+
+end
+
+var Cargo_Ship = new Ship("Cargo", "Herena")
+Cargo_Ship.Go_Sailing()
+```
+
