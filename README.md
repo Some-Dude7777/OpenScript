@@ -1,10 +1,10 @@
 # OpenScript
-A fast, dynamically AND statically typed, OOP-based interpreted language written in C++. It's meant to be a Python successor. Syntax similar to Python, Lua, Ruby and some other languages.
+A fast, dynamically typed, OOP-based interpreted language written in C++. It's meant to be a Python successor. Syntax similar to Python, Lua, Ruby and some other languages.
 Youtube tutorial and syntax highlighting will be created once the language is finished.
 
 # Features
 
-- Support for both static and dynamic typing.
+- Dynamic typing.
 - Structs, enums, classes, etc.
 - Closures
 
@@ -34,7 +34,7 @@ class This_Is_A_Class(x): // we'll get into classes later
   field x = x // field
 end
 
-var Class_1 = new This_Is_A_Class(5)
+var Class_1 = new This_Is_A_Class(5) // the new keyword creates an object out of a class
 ```
 
 # Functions
@@ -95,7 +95,7 @@ There are 3 types of loops (its a coincidence that every feature has 3 types): f
 
 ```
 from std use print()
-from syestem use sleep()
+from system use sleep()
 
 for i = 0, 10, 1:
   print("This has been printed " .. i .. " times")
@@ -153,3 +153,6 @@ enum Colors:
   Yellow
 end
 ```
+
+# If / Elif / Else
+
