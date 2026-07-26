@@ -24,6 +24,10 @@ OpenScript is currently under development.
 
 Installation instructions will be added once the first public release is available.
 
+## License
+
+OpenScript is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ## Hello, world!
 
 Here's how to print "Hello World!" in this language:
