@@ -96,7 +96,7 @@ repeat while true:
 end
 ```
 
-# Classes & Structs
+# Classes, Structs and Enums
 
 Classes are defined like this:
 
@@ -118,3 +118,23 @@ var Cargo_Ship = new Ship("Cargo", "Herena")
 Cargo_Ship.Go_Sailing()
 ```
 
+Structs are defined like this:
+
+```
+from std use print()
+
+struct Example:
+  var this = "that"
+end
+```
+
+Enums are defined like this:
+
+```
+enum Colors:
+  Red,
+  Blue,
+  Green,
+  Yellow
+end
+```
