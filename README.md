@@ -1,6 +1,6 @@
 # OpenScript
 
-OpenScript is a fast, dynamically typed, object-oriented interpreted programming language written in C++.
+OpenScript is a fast, dynamically typed, object-oriented interpreted programming language written primarily in Lua.
 
 It is intended to be a modern successor to Python, with syntax inspired by Python, Lua, Ruby, and several other languages.
 
