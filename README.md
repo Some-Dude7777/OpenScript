@@ -182,3 +182,32 @@ elif os.name == "Linux":
   print("Hello from linux")
 end
 ```
+
+## Signals and When
+
+This language supports events in the form of signals. Example:
+
+```openscript
+use std
+
+// 1. Declare the signal as a first-class primitive identifier
+signal game_over
+
+var playerHearts = 3
+var itemsCollected = ["Shield", "Master Sword", "Bomb Arrows"]
+
+// 2. Attach a background conditional monitor
+when playerHearts == 0:
+    std.print("Player fallen! Total assets cleared: " + std.toString(\$itemsCollected))
+    emit game_over // Broadcasts the signal globally across environments!
+end
+
+// 3. Attach an active event listener directly to the signal object
+when game_over:
+    std.print("Game Over. Hard rebooting interpreter registers...")
+    std.process.exit()
+end
+
+// Simulation: Simulating a state mutation change
+playerHearts = 0 // Triggers the sequential execution cascades immediately!
+```
