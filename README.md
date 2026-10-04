@@ -15,7 +15,7 @@ A YouTube tutorial and syntax-highlighting extensions will be created once the l
 - Structs
 - Enums
 - Modules
-- Built-in event handling (`signal`, `emit`, `when`) [1.1]
+- Built-in event handling (`signal`, `emit`, `when`)
 - A large standard library
 
 ## Installation
