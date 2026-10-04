@@ -15,7 +15,7 @@ A YouTube tutorial and syntax-highlighting extensions will be created once the l
 - Structs
 - Enums
 - Modules
-- Built-in event handling
+- Built-in event handling (`signal`, `emit`, `when`) [1.1]
 - A large standard library
 
 ## Installation
@@ -38,11 +38,11 @@ from std use print()
 print("Hello World!") // Hello World!
 ```
 
-As you can see, this language requires you to import things from the standard library.
+As you can see, this language requires you to import elements from the standard library.
 
 ## Variables
 
-There are 3 types of variables: regular variables, constands and fields.
+There are 3 types of variables: regular variables, constants, and fields.
 
 Each one of them is declared like this:
 
@@ -71,12 +71,12 @@ func MouseClicked():
   print("Mouse Clicked!")
 end
 
-mouse.OnClicked(MouseClicked())
+mouse.OnClicked(MouseClicked)
 ```
 
 ## Anonymous Functions
 
-An anonymous function is a function that gets called instantly upon definition. Defined with the lambda keyword.
+An anonymous function is a function that can be created dynamically inside expressions using the `lambda` keyword.
 
 ```openscript
 from input use mouse
@@ -91,24 +91,24 @@ mouse.OnClicked(
 
 ## Modules
 
-Modules have 3 separate keywords: use,from,as.
+Modules utilize 3 separate keywords: `use`, `from`, and `as`.
 
-You use use when you want to import a whole library:
+You use `use` when you want to import a whole library:
 ```openscript
 use std // imports the entire standard library
 ```
-You use from when you want to just use a single function, class, variable, etc. from the specified file.
+You use `from` when you want to just use a single function, class, variable, etc. from the specified file.
 ```openscript
 from std use print() // only imports the print() function
 ```
-And you use as when you want to use a library or a function, class, variable, etc. with a different name.
+And you use `as` when you want to use a library or a function, class, variable, etc. with a different name.
 ```openscript
-from std use print() as cout() // the interpreter now doesn't understand print() and only understands cout(), althought they have the exact same functionality
+from std use print() as cout() // the interpreter now looks for cout() instead of print()
 ```
 
 ## Loops
 
-There are 3 types of loops (its a coincidence that every feature has 3 types): for loop, repeat loop and repeat while loop
+There are 3 types of loops: for loops, repeat loops, and repeat while loops.
 
 ```openscript
 from std use print()
@@ -128,22 +128,20 @@ repeat while true:
 end
 ```
 
-## Classes, Structs and Enums
+## Classes, Structs, and Enums
 
 Classes are defined like this:
 
 ```openscript
-from std use print
+from std use print()
 
 class Ship(type, name):
   field type = type // note: there is an automatic constructor, so you don't need a __init__ method unlike Python.
   field name = name
 
-
   func Go_Sailing(self):
-    print("Ship with the name " .. self.name .. " and type " .. self.type " has went sailing."
+    print("Ship with the name " .. self.name .. " and type " .. self.type .. " has gone sailing.")
   end
-
 end
 
 var Cargo_Ship = new Ship("Cargo", "Herena")
@@ -153,10 +151,8 @@ Cargo_Ship.Go_Sailing()
 Structs are defined like this:
 
 ```openscript
-from std use print()
-
 struct Example:
-  var this = "that"
+  field this = "that"
 end
 ```
 Enums are defined like this:
@@ -172,7 +168,7 @@ end
 
 Just an if statement, executes only if the condition is true.
 
-```
+```openscript
 from std use print()
 from system use os
 
@@ -185,7 +181,7 @@ end
 
 ## Signals and When
 
-This language supports events in the form of signals. Example:
+This language natively supports asynchronous events in the form of signals. Example:
 
 ```openscript
 use std
@@ -209,5 +205,6 @@ when game_over:
 end
 
 // Simulation: Simulating a state mutation change
-playerHearts = 0 // Triggers the sequential execution cascades immediately!
+playerHearts = 0 // Triggers the sequential execution cascades immediately.
 ```
+
